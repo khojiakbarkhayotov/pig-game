@@ -20,7 +20,6 @@ const init = function () {
   scores = [0, 0];
   playing = true;
 
-  document.querySelector('.player').classList.remove('player--winner');
   document.querySelector('.score').textContent = 0;
   score0El.textContent = 0;
   score1El.textContent = 0;
@@ -31,6 +30,8 @@ const init = function () {
   document.querySelector('.current-score').textContent = current;
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
 };
 init();
 // changing the active player
